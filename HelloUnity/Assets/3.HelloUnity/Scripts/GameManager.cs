@@ -6,23 +6,30 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     static public GameManager instance;
-    
+
     private int score = 0;
     private int goal = 0;
+    private bool isWin = false;
 
     [SerializeField] GameObject winPanel = null;
 
     public int Score
     {
         get { return score; }
-        set { 
+        set {
             score = value;
-            if(score >= goal)
+            if (score >= goal)
             {
                 Debug.Log("Win!!");
+                isWin = true;
                 winPanel?.SetActive(true);
             }
         }
+    }
+
+    public bool IsWin
+    {
+        get { return isWin; }
     }
 
     private void Awake()

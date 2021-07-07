@@ -15,6 +15,20 @@ public class Basic : MonoBehaviour
 
     }
 
+    /*
+     *  프로그래밍은 결국 사람이 하는 것이기 때문에,
+     *  데이터를 주고 받거나 표시를 할 때 문자열을 이용하게 된다.
+     *  그만큼 문자열 처리는 프로그래밍에서 자주 사용되며 중요하다.
+     */
+    public void String()
+    {
+        // 덧셈
+
+        // 곱셈
+
+        // Format
+    }
+
     public void Collections()
     {
         List<int> list = new List<int>();
