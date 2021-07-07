@@ -44,7 +44,9 @@
     - PlayerMovement 스크립트 작성
 1. 동전 획득 스크립트 작성하기
     - Collider 컴포넌트 설명
+    - CoinRot 스크립트 작성
     - Coin 스크립트 작성
+    - 프리팹 만들기
     - GameManager 스크립트 작성
     - Game UI 구성하기
     - 카메라 이동 스크립트 구현하기(LateUpdate)
