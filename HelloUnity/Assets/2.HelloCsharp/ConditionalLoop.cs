@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class ConditionalLoop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Coditional()
     {
-        
+        // if, else, switch
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ForLoop()
     {
-        
+    }
+
+    public void WhileLoop()
+    {
+    }
+
+    public void ForeachLoop()
+    {
     }
 }

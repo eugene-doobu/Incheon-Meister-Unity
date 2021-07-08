@@ -8,6 +8,13 @@ public class Lambda : MonoBehaviour
 {
     Action attack = null;
 
+    private int score;
+    public int Score
+    {
+        get => score;
+        set => score = value;
+    }
+
     private void Awake()
     {
         GetComponent<Button>().onClick.AddListener(() => Debug.Log("Dynamic Event Binding"));
