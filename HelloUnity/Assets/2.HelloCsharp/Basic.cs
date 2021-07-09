@@ -61,6 +61,23 @@ public class Basic : MonoBehaviour
 
     }
 
+    enum State
+    {
+        IDLE, // 0, 아무런 값도 설정해주지 않으면 기본값 0
+        WALK, // 1, 이전 값 + 1
+        ATTACK = 4, // 4, 값을 임의로 설정해줄 수 있음
+        DEAD // 5
+    }
+
+    public void Enum()
+    {
+        // 비쥬얼스튜디오에서 Enum값에 마우스를 올리면 값 확인가능
+        State idleState = State.IDLE;
+        State walkState = State.WALK;
+        State attackState = State.ATTACK;
+        State deadState = State.DEAD;
+    }
+
     public void Collections()
     {
         List<int> list = new List<int>();
