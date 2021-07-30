@@ -252,8 +252,8 @@ Camera:
   m_GameObject: {fileID: 466004232}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.20000002, g: 0.20000002, b: 0.20000002, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -269,7 +269,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 1.4
   m_Depth: -1
   m_CullingMask:
@@ -293,13 +293,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466004232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: -10}
+  m_LocalRotation: {x: -0, y: 0.12556414, z: 0.9920856, w: 0}
+  m_LocalPosition: {x: 0, y: -0.91, z: -2.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -14.427, y: 0, z: 180}
 --- !u!114 &466004236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,13 +356,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702682647}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!114 &702682649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,19 +377,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   depth: 8
   mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  leafMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   material: {fileID: 2100000, guid: 8f61158a1dd9f794780fe1ed37f71bb8, type: 2}
-  gradient:
+  gradientA:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 1}
+    key0: {r: 0.7735849, g: 0.29668397, b: 0.018244924, a: 0.3137255}
+    key1: {r: 0.8867924, g: 0.6269798, b: 0.43921322, a: 0.3529412}
+    key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 31997
+    ctime1: 32189
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -397,7 +398,36 @@ MonoBehaviour:
     ctime6: 0
     ctime7: 0
     atime0: 0
-    atime1: 31804
+    atime1: 65342
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  gradientB:
+    serializedVersion: 2
+    key0: {r: 0.8773585, g: 0.3082611, b: 0, a: 0.54901963}
+    key1: {r: 1, g: 0.582752, b: 0, a: 0.627451}
+    key2: {r: 1, g: 0.83267355, b: 0, a: 1}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 32382
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
     atime2: 65535
     atime3: 0
     atime4: 0
@@ -406,4 +436,11 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
+    m_NumAlphaKeys: 2
+  leafColorA: {r: 0.45882356, g: 0.97647065, b: 0.29803923, a: 0.5019608}
+  leafColorB: {r: 0.21568629, g: 0.4901961, b: 0.13333334, a: 0.9019608}
+  maxSagAngleA: 15
+  maxSagAngleB: 25
+  spinSpeedA: 20
+  spinSpeedB: 25
+  reverseSpinChance: 0.25
