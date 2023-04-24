@@ -20,7 +20,7 @@ public class Game : MonoBehaviour
         topPaddle.Move(ball.Position.x, arenaExtents.x);
         ball.Move();
         BounceYIfNeeded();
-        BounceXIfNeeded();
+        BounceXIfNeeded(ball.Position.x);
         ball.UpdateVisualization();
     }
 
@@ -29,22 +29,37 @@ public class Game : MonoBehaviour
         float yExtents = arenaExtents.y - ball.Extents;
         if (ball.Position.y < -yExtents)
         {
-            ball.BounceY(-yExtents);
+            BounceY(-yExtents, bottomPaddle);
         }
         else if (ball.Position.y > yExtents)
         {
-            ball.BounceY(yExtents);
+            BounceY(yExtents, topPaddle);
+        }
+    }
+
+    void BounceY(float boundary, Paddle defender)
+    {
+        var durationAfterBounce = (ball.Position.y - boundary) / ball.Velocity.y;
+        var bounceX = ball.Position.x - ball.Velocity.x * durationAfterBounce;
+        
+        BounceXIfNeeded(bounceX);
+        bounceX = ball.Position.x - ball.Velocity.x * durationAfterBounce;
+        ball.BounceY(boundary);
+        
+        if(defender.HitBall(bounceX, ball.Extents, out float hitFactor))
+        {
+            ball.SetXPositionAndSpeed(bounceX, hitFactor, durationAfterBounce);
         }
     }
     
-    void BounceXIfNeeded()
+    void BounceXIfNeeded(float x)
     {
         float xExtents = arenaExtents.x - ball.Extents;
-        if (ball.Position.x < -xExtents)
+        if (x < -xExtents)
         {
             ball.BounceX(-xExtents);
         }
-        else if (ball.Position.x > xExtents)
+        else if (x > xExtents)
         {
             ball.BounceX(xExtents);
         }
